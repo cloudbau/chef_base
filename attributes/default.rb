@@ -11,3 +11,6 @@ default['base']['include']['build_essential'] = false
 default['base']['operation-tools'] = %w{ htop iotop apachetop atop nmon dstat iftop nload }
 
 default['base']['motd']['operation_tools'] = true
+
+# overrides
+normal['ntp']['apparmor_enabled'] = true

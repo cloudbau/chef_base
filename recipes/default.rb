@@ -23,8 +23,7 @@ include_recipe "apt"
 # https://github.com/opscode-cookbooks/build-essential
 include_recipe "build-essential" if node['base']['include']['build_essential']
 
-# https://github.com/opscode-cookbooks/ntp/
-include_recipe "ntp" if node['base']['include']['ntp']
+include_recipe 'base::ntp' if node['base']['include']['ntp']
 
 # https://github.com/opscode-cookbooks/chef-client
 include_recipe "chef-client::delete_validation"
